@@ -7,7 +7,12 @@ readme = "README.md"
 
 [[tool.poetry.source]]
 name = "torch"
-url = "https://data.pyg.org/whl/torch-2.1.0+cpu.html"
+url = "https://data.pyg.org/whl/torch-2.0.0+cpu.html"
+priority = "supplemental"
+
+[[tool.poetry.source]]
+name = "torch-geometric"
+url = "https://pytorch-geometric.com/whl/torch-2.0.0+cpu.html"
 priority = "supplemental"
 
 [tool.poetry.dependencies]
@@ -16,10 +21,18 @@ numpy = "~1.24"
 matplotlib = "^3.8.2"
 scikit-learn = "~1.3"
 scipy = "~1.8"
-torch = "2.1.0"
-torch-geometric = "2.4.0"
+torch = "2.0.0"
 torchmetrics = "1.2.0"
-torch-cluster = {version = "1.6.3", source = "torch"}
+ase = "^3.22.1"
+notebook = "^7.0.6"
+e3nn = "^0.5.1"
+plotly = "^5.18.0"
+torch-spline-conv = {version = "^1.2.2+pt20cpu", source = "torch-geometric"}
+torch-sparse = {version = "^0.6.18+pt20cpu", source = "torch-geometric"}
+torch-cluster = {version = "^1.6.3+pt20cpu", source = "torch-geometric"}
+torch-scatter = {version = "^2.1.2+pt20cpu", source = "torch-geometric"}
+torch-geometric = "^2.4.0"
+pandas = "^2.1.4"
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.1.11"
