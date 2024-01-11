@@ -1,7 +1,7 @@
 ## Technical details
-Required tools: `conda`, `conda-lock`, `mamba`, `poetry`
+Required tools: `conda`, `conda-lock`, `poetry`
 
-### Create and activate the environment
+### Do this once (create and activate the environment)
 
 ```
 conda-lock install --name YOURENV linux-64.conda.lock
@@ -9,7 +9,7 @@ conda activate YOURENV
 poetry install
 ```
 
-### Update the environment
+### Do this happily ever after (Update the environment)
 
 ```
 # Re-generate Conda lock file(s) based on environment.yml
