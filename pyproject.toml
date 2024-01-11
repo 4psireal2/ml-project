@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "mlproject"
+version = "0.1.0"
+description = ""
+authors = ["nguyed99 <nguyed99@physik.fu-berlin.de>"]
+readme = "README.md"
+
+[[tool.poetry.source]]
+name = "torch"
+url = "https://data.pyg.org/whl/torch-2.1.0+cpu.html"
+priority = "supplemental"
+
+[tool.poetry.dependencies]
+python = "~3.10"
+numpy = "~1.24"
+matplotlib = "^3.8.2"
+scikit-learn = "~1.3"
+scipy = "~1.8"
+torch = "2.1.0"
+torch-geometric = "2.4.0"
+torchmetrics = "1.2.0"
+torch-cluster = {version = "1.6.3", source = "torch"}
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.1.11"
+yapf = "^0.40.2"
+pre-commit = "^3.6.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+# disable line-length lint since it is handled by yapf
+ignore = ["E501"]
+line-length = 118
+
+[tool.yapf]
+based_on_style = "pep8"
+column_limit = 120
+allow_split_before_dict_value = false

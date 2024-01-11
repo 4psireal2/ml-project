@@ -1,0 +1,12 @@
+name: ml-project
+channels:
+  - defaults
+  - conda-forge
+  - pytorch
+
+dependencies:
+  - pip
+  - conda-lock
+  - poetry
+  - python=3.10.*
+  - pytorch::pytorch=2.1.0
