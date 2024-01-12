@@ -1,3 +1,6 @@
+## Ideas
+- [] Predict pDOS of HEA such as CoCrFeMnNi
+
 ## Technical details
 Required tools: `conda`, `conda-lock`, `poetry`
 
@@ -6,7 +9,7 @@ Required tools: `conda`, `conda-lock`, `poetry`
 ```
 conda-lock install --name YOURENV linux-64.conda.lock
 conda activate YOURENV
-poetry install
+make init
 ```
 
 ### Do this happily ever after (Update the environment)

@@ -358,8 +358,10 @@ def train(model, optimizer, dataloader_train, dataloader_valid, loss_fn, loss_fn
                   f"valid loss = {valid_avg_loss[0]:8.4f}   " +
                   f"elapsed time = {time.strftime('%H:%M:%S', time.gmtime(wall))}")
 
-            with open(run_name + '.torch', 'wb') as f:
-                torch.save(results, f)
-
+            
         if scheduler is not None:
             scheduler.step()
+    
+        
+    with open(run_name + '.torch', 'wb') as f:
+            torch.save(results, f)
