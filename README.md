@@ -1,6 +1,7 @@
 ## Ideas
-- [] Predict pDOS of HEA such as CoCrFeMnNi
-
+- [] Predict phDOS, pDOS, phonon frequency spectra of HEA such as CoCrFeMnNi
+- [] Predict thermal, phonon, and dielectric properties
+- [] Look into `Reducing Tensor Products into irreps` -> HOSVD, tensor network representation
 ## Technical details
 Required tools: `conda`, `conda-lock`, `poetry`
 
@@ -20,5 +21,6 @@ conda-lock -f environment.yml -p linux-64 -k explicit --filename-template "linux
 # Update Conda packages based on re-generated lock file
 conda update --file linux-64.conda.lock
 # Update Poetry packages and re-generate poetry.lock
-poetry update
+poetry lock --no-update
+poetry install
 ```
